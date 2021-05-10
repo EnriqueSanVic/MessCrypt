@@ -2,7 +2,7 @@
 
 Aplicación Chat por grupos GUI servidor-cliente Online, en LAN y localhost.
 
-Para probar ejecutar el Servidor.jar (servidor) en un dispositivo. Puerto por defecto: 4449. 
+Para probar ejecutar el Servidor.jar (servidor) en un dispositivo.  
 
 Después ejecutar Chat.jar (cliente) en las siguientes situaciones:
 
