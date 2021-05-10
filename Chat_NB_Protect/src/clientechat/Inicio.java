@@ -97,7 +97,7 @@ public class Inicio extends javax.swing.JFrame {
         });
 
         textField2.setBackground(new java.awt.Color(102, 255, 255));
-        textField2.setText("");
+        textField2.setText("4449");
         textField2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 textField2KeyPressed(evt);
