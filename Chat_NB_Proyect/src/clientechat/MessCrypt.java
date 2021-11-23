@@ -1,10 +1,14 @@
 
 package clientechat;
 
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.io.*;  
 import java.net.*;  
 import javax.imageio.ImageIO;
+import javax.swing.JFrame;
 
 public class MessCrypt {
     
@@ -41,6 +45,7 @@ public class MessCrypt {
                 init.setTitle("MessCrypt");
                 init.setIconImage(imagen);
                 init.setImagen(imagen);
+                ponerMedioPantalla(init);
                 init.show();
 
                 /*
@@ -64,6 +69,7 @@ public class MessCrypt {
                 ventana = new Panel(chat);
                 ventana.setTitle("MessCrypt");
                 ventana.setIconImage(imagen);
+                ponerMedioPantalla(ventana);
 
                 //referencias a todos los objetos relacionados con la comunicacion en el socket
                 Socket sl = null;
@@ -97,6 +103,7 @@ public class MessCrypt {
                     ErrorConexion advertencia = new ErrorConexion(); //se crea la ventana de Warning que es un aviso de error de conexion
                     advertencia.setTitle("Error");
                     advertencia.setIconImage(imagen);
+                    ponerMedioPantalla(advertencia);
                     advertencia.show();
 
                     //esperamos a que el usuario lea la advertencia y la acepte o la cierre
@@ -124,6 +131,19 @@ public class MessCrypt {
         ventana.dispose();
         act.close(); //se cierran las instancias multi hilo involucradas
         System.out.println("Finalizado");
+    }
+    
+    public static void ponerMedioPantalla(Container ventana) {
+        
+        int width, height;
+        Dimension pantalla = Toolkit.getDefaultToolkit().getScreenSize();
+
+        width = (pantalla.width/2) - (ventana.getSize().width/2);
+        
+        height = (pantalla.height/2) - (ventana.getSize().height/2);
+        
+        ventana.setLocation(width, height);
+
     }
     
 }

@@ -19,6 +19,7 @@ public class ErrorConexion extends javax.swing.JFrame {
     
     
     public ErrorConexion() {
+        MessCrypt.ponerMedioPantalla(this);
         initComponents();
     }
 

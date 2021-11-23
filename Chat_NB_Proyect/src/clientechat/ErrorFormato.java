@@ -15,6 +15,7 @@ public class ErrorFormato extends javax.swing.JFrame {
      * Creates new form ErrorFormato
      */
     public ErrorFormato() {
+        MessCrypt.ponerMedioPantalla(this);
         initComponents();
     }
 
